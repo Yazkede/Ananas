@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>CSS Анимация filter</title>
+    <style>
+        img {
+            -webkit-animation: mymove 7s infinite;
+            /* Chrome, Safari, Opera */
+            animation: mymove 7s infinite;
+        }
+
+        /* Chrome, Safari, Opera */
+        @-webkit-keyframes mymove {
+            50% {
+                -webkit-filter: grayscale(100%);
+                filter: grayscale(100%);
+            }
+        }
+
+        /* Стандартный синтаксис */
+        @keyframes mymove {
+            50% {
+                -webkit-filter: grayscale(100%);
+                filter: grayscale(100%);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>CSS Анимация filter</h1>
+
+    <p>Постепенно изменится цвет изображения на черно-белый (100% оттенки серого) и вернется к исходному цвету:
+    <p>
+
+        <img src="pineapple.jpg" alt="Ананас" width="300" height="300">
+
+    <p><strong>Примечание:</strong> Свойство filter не поддерживается в Safari 5.1 и более ранних версиях.</p>
+
+</body>
+
+</html>
